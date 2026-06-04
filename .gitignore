@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg-info
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Data + artifacts
+data/chroma/
+data/neo4j/
+data/eval_runs/
+data/state.json
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit
+.streamlit/secrets.toml

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cranimem-proto"
+version = "0.1.0"
+description = "CraniMem-style agent memory layer prototype: bounded episodic buffer + Neo4j knowledge graph + consolidation + Streamlit visualization."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+  "openai>=1.40",
+  "chromadb>=0.5",
+  "neo4j>=5.20",
+  "sentence-transformers>=3.0",
+  "streamlit>=1.36",
+  "pyvis>=0.3.2",
+  "pandas>=2.2",
+  "python-dotenv>=1.0",
+  "pydantic>=2.7",
+  "tenacity>=8.3",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-mock>=3.14", "ruff>=0.5"]
+baselines = ["cranimem>=0.1.0"]
+
+[tool.setuptools.packages.find]
+include = ["app*", "memory*", "agent*", "viz*", "scripts*"]
+exclude = ["tests*", "data*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
