@@ -20,6 +20,13 @@ cp .env.example .env                 # set GROQ_API_KEY
 streamlit run app/main.py
 ```
 
+### No Docker? Use the in-process backend
+
+The knowledge graph has a `networkx` backend that runs in-process and
+persists to `data/kg.pkl`. Set `KG_BACKEND=networkx` in `.env` and skip the
+`docker compose up` step. Everything else (Chroma episodic buffer, Streamlit
+viz, evaluation) works the same.
+
 Run the benchmark:
 
 ```bash

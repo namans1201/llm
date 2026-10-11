@@ -7,7 +7,7 @@ import time
 from agent.llm import LLMClient
 from agent.prompts import build_seed_entity_prompt
 from memory.episodic import EpisodicBuffer
-from memory.kg import KnowledgeGraph
+from memory.kg import KGBackend
 from memory.schemas import Goal, MemoryItem, RetrievalResult
 from memory.utility import UtilityScorer
 
@@ -23,7 +23,7 @@ class HybridRetriever:
     def __init__(
         self,
         buffer: EpisodicBuffer,
-        kg: KnowledgeGraph,
+        kg: KGBackend,
         llm: LLMClient | None = None,
         k_episodic: int = 6,
         kg_hops: int = 2,

@@ -14,7 +14,7 @@ import time
 
 from memory.episodic import EpisodicBuffer
 from memory.extractor import FactExtractor
-from memory.kg import KnowledgeGraph
+from memory.kg import KGBackend
 from memory.schemas import ConsolidationReport, MemoryItem
 from memory.utility import UtilityScorer
 
@@ -23,7 +23,7 @@ class Consolidator:
     def __init__(
         self,
         buffer: EpisodicBuffer,
-        kg: KnowledgeGraph,
+        kg: KGBackend,
         extractor: FactExtractor,
         promote_threshold: float = 0.6,
         decay_half_life_s: float = 3600.0,

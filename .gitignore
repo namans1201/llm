@@ -21,6 +21,8 @@ data/chroma/
 data/neo4j/
 data/eval_runs/
 data/state.json
+data/kg.pkl
+data/kg.pkl.tmp
 *.log
 
 # Testing
