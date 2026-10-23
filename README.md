@@ -1,4 +1,4 @@
-# cranimem-proto
+# Cranimem-RecallLM
 
 A learning and research prototype of a CraniMem-style agent memory layer:
 bounded episodic buffer plus Neo4j knowledge graph plus gating plus utility
